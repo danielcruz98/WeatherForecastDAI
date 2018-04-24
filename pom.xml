@@ -103,10 +103,18 @@
                             <addClasspath>true</addClasspath>
                             <classpathPrefix>libs/</classpathPrefix>
                             <mainClass>
-                                com.wfdai.weatherforecastdai.main.Main
+                                main.java.com.wfdai.weatherforecastdai.main.Main
                             </mainClass>
                         </manifest>
                     </archive>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <version>1.2.1</version>
+                <configuration>
+                    <mainClass>main.java.com.wfdai.weatherforecastdai.main.Main</mainClass>
                 </configuration>
             </plugin>
         </plugins>
