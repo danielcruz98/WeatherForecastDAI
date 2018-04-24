@@ -11,9 +11,9 @@ package main.java.com.wfdai.weatherforecastdai.main;
  */
 public class DataBase {
 
-    private final String user = "root";
-    private final String password = "1234";
-    private final String serverName = "127.0.0.1";
+    private final String user = "wfdai";
+    private final String password = "ieY4eemaJeifoh4z";
+    private final String serverName = "34.246.160.88";
 
     public String getUser() {
         return user;

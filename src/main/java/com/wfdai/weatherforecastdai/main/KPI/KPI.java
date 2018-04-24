@@ -21,7 +21,7 @@ public class KPI implements MqttCallback {
 
     public void getKPI() throws InterruptedException {
         try {
-            client = new MqttClient("tcp://127.0.0.1:8080", "javaServer");
+            client = new MqttClient("tcp://127.0.0.1:9001", "javaServer");
             client.connect();
             client.setCallback(this);
             client.subscribe("$SYS/broker/#");

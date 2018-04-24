@@ -23,7 +23,7 @@ public class Publisher {
     }
     public void publish(String localidade, String mensagem, boolean retained) {
         int qos             = 2;
-        String broker       = "tcp://127.0.0.1:8080";
+        String broker       = "tcp://127.0.0.1:9001";
         String clientId     = "javaServer";
         this.topic = localidade;
         this.content = mensagem;
