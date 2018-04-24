@@ -103,7 +103,7 @@
                             <addClasspath>true</addClasspath>
                             <classpathPrefix>libs/</classpathPrefix>
                             <mainClass>
-                                main.java.com.wfdai.weatherforecastdai.main.Main
+                                com.wfdai.weatherforecastdai.main.Main
                             </mainClass>
                         </manifest>
                     </archive>
