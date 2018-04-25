@@ -93,14 +93,14 @@ private final SimpleDateFormat rfc3339 = new SimpleDateFormat("yyyy-MM-dd'T'HH:m
             + "      \"ts\": \""+ rfc3339.format(new Date()) +"\",\n"
             + "      \"series\": {\n"
             + "        \"$_time\": " + registoKPI.getTime().toString()+ ",\n"
-            + "        \"Uptime\": \"" + registoKPI.getUptime().toString()+ "\" ,\n"
-            + "        \"Total Clientes\": \"" + registoKPI.getTotalClients().toString()+ "\" ,\n"
-            + "        \"Clientes Ativos\": \"" + registoKPI.getActiveClients().toString()+ "\",\n"
-            + "        \"Mensagens\": \"" + registoKPI.getMessages().toString()+ "\",\n"
-            + "        \"Subscrições\": \"" + registoKPI.getSubscriptions()+ "\",\n"
-            + "        \"Carga do sistema nos últimos 5 minutos\": \"" + registoKPI.getReceivedLoad5().toString()+ "\",\n"
-            + "        \"Carga do sistema nos últimos 15 minutos\": \"" + registoKPI.getReceivedLoad15().toString()+ "\",\n"
-            + "        \"Bytes enviados nos últimos 15 minutos\": \"" + registoKPI.getBytesSent15().toString()+ "\"\n"
+            + "        \"Uptime\": " + registoKPI.getUptime().toString()+ " ,\n"
+            + "        \"Total Clientes\": " + registoKPI.getTotalClients().toString()+ " ,\n"
+            + "        \"Clientes Ativos\": " + registoKPI.getActiveClients().toString()+ ",\n"
+            + "        \"Mensagens\": " + registoKPI.getMessages().toString()+ ",\n"
+            + "        \"Subscrições\": " + registoKPI.getSubscriptions()+ ",\n"
+            + "        \"Carga do sistema nos últimos 5 minutos\": " + registoKPI.getReceivedLoad5().toString()+ ",\n"
+            + "        \"Carga do sistema nos últimos 15 minutos\": " + registoKPI.getReceivedLoad15().toString()+ ",\n"
+            + "        \"Bytes enviados nos últimos 15 minutos\": " + registoKPI.getBytesSent15().toString()+ "\n"
 
             + "      }\n    }\n  ]\n}\"";
     }
