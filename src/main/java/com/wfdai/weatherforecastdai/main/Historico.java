@@ -96,11 +96,11 @@ public class Historico {
                 LocalTime timePart = LocalTime.parse(rs.getTime("dataDados").toString());
                 LocalDateTime dt = LocalDateTime.of(datePart, timePart);
                 Date data = java.sql.Timestamp.valueOf(dt);
-                dataDados.add(data);
+                dataDados.add("\""+data+"\"");
                 humidade.add(rs.getInt("humidade"));
                 visibilidade.add(rs.getFloat("visibilidade"));
-                nascerSol.add(rs.getString("nascerSol"));
-                porSol.add(rs.getString("porSol"));
+                nascerSol.add("\""+rs.getString("nascerSol")+"\"");
+                porSol.add("\""+rs.getString("porSol")+"\"");
                 System.out.println("");
             }
             conn.close();
