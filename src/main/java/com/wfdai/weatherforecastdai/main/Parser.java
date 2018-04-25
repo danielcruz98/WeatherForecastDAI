@@ -37,7 +37,7 @@ private final SimpleDateFormat rfc3339 = new SimpleDateFormat("yyyy-MM-dd'T'HH:m
             + "        \"NascerSol\": [ \"" + weather.getNascerSol()+ "\" ],\n"
             + "        \"PorSol\": [ \"" + weather.getPorSol()+ "\" ]\n"
           
-            + "      }\n    }\n  ]\n}\"";
+            + "      }\n    }\n  ]\n}";
     }
     
         public void setParser(Historico historico){
@@ -60,7 +60,7 @@ private final SimpleDateFormat rfc3339 = new SimpleDateFormat("yyyy-MM-dd'T'HH:m
             + "        \"NascerSol\": " + historico.getNascerSol().toString()+ ",\n"
             + "        \"PorSol\": " + historico.getPorSol().toString()+ "\n"
           
-            + "      }\n    }\n  ]\n}\"";
+            + "      }\n    }\n  ]\n}";
     }
     
     
@@ -79,7 +79,7 @@ private final SimpleDateFormat rfc3339 = new SimpleDateFormat("yyyy-MM-dd'T'HH:m
             + "      \"code\": \""+ code +"\",\n"
             + "      \"title\": \""+ title +"\",\n"
             + "      \"description\": \""+ description +"\"\n"
-            + "      }\n    }\n  ]\n}\"";
+            + "      }\n    }\n  ]\n}";
     }
     
     public void setParser(RegistoKPI registoKPI){
@@ -102,7 +102,7 @@ private final SimpleDateFormat rfc3339 = new SimpleDateFormat("yyyy-MM-dd'T'HH:m
             + "        \"Carga do sistema nos últimos 15 minutos\": " + registoKPI.getReceivedLoad15().toString()+ ",\n"
             + "        \"Bytes enviados nos últimos 15 minutos\": " + registoKPI.getBytesSent15().toString()+ "\n"
 
-            + "      }\n    }\n  ]\n}\"";
+            + "      }\n    }\n  ]\n}";
     }
     
     public void setParser(GestorErros erro){
@@ -119,7 +119,7 @@ private final SimpleDateFormat rfc3339 = new SimpleDateFormat("yyyy-MM-dd'T'HH:m
             + "        \"Erros\": " + erro.getErros().toString()+ "\n"
      
 
-            + "      }\n    }\n  ]\n}\"";
+            + "      }\n    }\n  ]\n}";
     }
     
 }
