@@ -35,7 +35,7 @@ public class Historico {
         this.velocidadeVento = new ArrayList<Float>();
         this.temperatura = new ArrayList<Integer>();
         this.pressao = new ArrayList<Float>();
-        this.dataDados = new ArrayList<Date>();
+        this.dataDados = new ArrayList<String>();
         this.humidade = new ArrayList<Integer>();
         this.visibilidade = new ArrayList<Float>();
         this.nascerSol = new ArrayList<String>();
