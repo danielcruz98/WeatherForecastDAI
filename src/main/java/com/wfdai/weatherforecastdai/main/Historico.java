@@ -126,7 +126,7 @@ public class Historico {
         return pressao;
     }
 
-    public ArrayList<Date> getDataDados() {
+    public ArrayList<String> getDataDados() {
         return dataDados;
     }
 
