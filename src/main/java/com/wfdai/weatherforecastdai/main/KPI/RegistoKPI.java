@@ -16,8 +16,8 @@ public class RegistoKPI {
 
     DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
 
-    ArrayList<String> uptime, totalClients, activeClients, messages, subscriptions, receivedLoad5, receivedLoad15, bytesSent15;
-    ArrayList<Date> time;
+    ArrayList<String> uptime, totalClients, activeClients, messages, subscriptions, receivedLoad5, receivedLoad15, bytesSent15, time;
+    //ArrayList<Date> time;
 
     public RegistoKPI() {
         this.uptime = new ArrayList<String>();
@@ -28,7 +28,7 @@ public class RegistoKPI {
         this.receivedLoad5 = new ArrayList<String>();
         this.receivedLoad15 = new ArrayList<String>();
         this.bytesSent15 = new ArrayList<String>();
-        this.time = new ArrayList<Date>();
+        this.time = new ArrayList<String>();
     }
 
     public void putKPI(KPI kpi) {
@@ -73,7 +73,7 @@ public class RegistoKPI {
             ResultSet rs = st.executeQuery("Select * from mydb.KPI");
 
             while (rs.next()) {
-                uptime.add(rs.getString("uptime"));
+                uptime.add("\""+rs.getString("uptime")+"\"");
                 totalClients.add(rs.getString("totalClients"));
                 activeClients.add(rs.getString("activeClients"));
                 messages.add(rs.getString("messages"));
@@ -86,7 +86,7 @@ public class RegistoKPI {
                 LocalTime timePart = LocalTime.parse(rs.getTime("time").toString());
                 LocalDateTime dt = LocalDateTime.of(datePart, timePart);
                 Date data = java.sql.Timestamp.valueOf(dt);
-                time.add(data);
+                time.add("\""+data.toString()+"\"");
                 //time.add(rs.getDate("time"));
             }
             conn.close();
@@ -128,7 +128,7 @@ public class RegistoKPI {
         return bytesSent15;
     }
 
-    public ArrayList<Date> getTime() {
+    public ArrayList<String> getTime() {
         return time;
     }
 
