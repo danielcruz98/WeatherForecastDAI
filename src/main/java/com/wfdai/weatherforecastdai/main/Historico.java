@@ -24,7 +24,7 @@ public class Historico {
     ArrayList<Float> velocidadeVento;
     ArrayList<Integer> temperatura;
     ArrayList<Float> pressao;
-    ArrayList<Date> dataDados;
+    ArrayList<String> dataDados;
     ArrayList<Integer> humidade;
     ArrayList<Float> visibilidade;
     ArrayList<String> nascerSol;
