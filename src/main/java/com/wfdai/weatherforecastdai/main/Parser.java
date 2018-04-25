@@ -35,7 +35,7 @@ private final SimpleDateFormat rfc3339 = new SimpleDateFormat("yyyy-MM-dd'T'HH:m
             + "        \"Humidade\": [ " + weather.getHumidade()+ " ],\n"
             + "        \"Visibilidade\": [ " + weather.getVisibilidade()+ " ],\n"
             + "        \"NascerSol\": [ " + weather.getNascerSol()+ " ],\n"
-            + "        \"PorSol\": [ " + weather.getPorSol()+ " ],\n"
+            + "        \"PorSol\": [ " + weather.getPorSol()+ " ]\n"
           
             + "      }\n    }\n  ]\n}\"";
     }
@@ -58,7 +58,7 @@ private final SimpleDateFormat rfc3339 = new SimpleDateFormat("yyyy-MM-dd'T'HH:m
             + "        \"Humidade\": " + historico.getHumidade().toString()+ ",\n"
             + "        \"Visibilidade\": " + historico.getVisibilidade().toString()+ ",\n"
             + "        \"NascerSol\": " + historico.getNascerSol().toString()+ ",\n"
-            + "        \"PorSol\": " + historico.getPorSol().toString()+ ",\n"
+            + "        \"PorSol\": " + historico.getPorSol().toString()+ "\n"
           
             + "      }\n    }\n  ]\n}\"";
     }
@@ -78,7 +78,7 @@ private final SimpleDateFormat rfc3339 = new SimpleDateFormat("yyyy-MM-dd'T'HH:m
             + "      \"ts\": \""+  rfc3339.format(ts) +"\",\n"
             + "      \"code\": \""+ code +"\",\n"
             + "      \"title\": \""+ title +"\",\n"
-            + "      \"description\": \""+ description +"\",\n"
+            + "      \"description\": \""+ description +"\"\n"
             + "      }\n    }\n  ]\n}\"";
     }
     
@@ -100,7 +100,7 @@ private final SimpleDateFormat rfc3339 = new SimpleDateFormat("yyyy-MM-dd'T'HH:m
             + "        \"Subscrições\": " + registoKPI.getSubscriptions()+ ",\n"
             + "        \"Carga do sistema nos últimos 5 minutos\": " + registoKPI.getReceivedLoad5().toString()+ ",\n"
             + "        \"Carga do sistema nos últimos 15 minutos\": " + registoKPI.getReceivedLoad15().toString()+ ",\n"
-            + "        \"Bytes enviados nos últimos 15 minutos\": " + registoKPI.getBytesSent15().toString()+ ",\n"
+            + "        \"Bytes enviados nos últimos 15 minutos\": " + registoKPI.getBytesSent15().toString()+ "\n"
 
             + "      }\n    }\n  ]\n}\"";
     }
@@ -116,7 +116,7 @@ private final SimpleDateFormat rfc3339 = new SimpleDateFormat("yyyy-MM-dd'T'HH:m
             + "      \"ts\": \""+  rfc3339.format(new Date()) +"\",\n"
             + "      \"series\": {\n"
             + "        \"$_time\": " + erro.getTime().toString()+ ",\n"
-            + "        \"Erros\": " + erro.getErros().toString()+ " ,\n"
+            + "        \"Erros\": " + erro.getErros().toString()+ "\n"
      
 
             + "      }\n    }\n  ]\n}\"";
