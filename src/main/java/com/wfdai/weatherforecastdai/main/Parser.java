@@ -48,7 +48,7 @@ private final SimpleDateFormat rfc3339 = new SimpleDateFormat("yyyy-MM-dd'T'HH:m
             + "  \"device\": {\n    \"deviceID\": \"servidorjava\"\n  },\n"
             + "  \"measurements\": [\n"
             + "    {\n"
-            + "      \"ts\": \""+  rfc3339.format(LocalDateTime.now()) +"\",\n"
+            + "      \"ts\": \""+  rfc3339.format(new Date()) +"\",\n"
             + "      \"series\": {\n"
             + "        \"$_time\": " + historico.getDataDados().toString()+ ",\n"
             + "        \"DirecaoVento\": " + historico.getDirecaoVento().toString()+ " ,\n"
