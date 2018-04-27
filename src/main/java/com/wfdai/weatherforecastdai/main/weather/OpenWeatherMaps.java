@@ -7,17 +7,14 @@ package main.java.com.wfdai.weatherforecastdai.main.weather;
 
 import java.io.IOException;
 import java.text.SimpleDateFormat;
-import java.util.Date;
 import javax.xml.bind.JAXBException;
 import net.aksingh.owmjapis.CurrentWeather;
 import net.aksingh.owmjapis.OpenWeatherMap;
-
 /**
  *
  * @author daniel
  */
 public class OpenWeatherMaps implements WeatherInterface {
-
     /**
      *
      * @param localizacao
@@ -45,7 +42,4 @@ public class OpenWeatherMaps implements WeatherInterface {
         weather.porSol = new SimpleDateFormat("HH:mm").format(cwd.getSysInstance().getSunsetTime());
 
     }
-
-  
-
 }

@@ -31,15 +31,15 @@ public class Historico {
     ArrayList<String> porSol;
 
     public Historico() {
-        this.direcaoVento = new ArrayList<Integer>();
-        this.velocidadeVento = new ArrayList<Float>();
-        this.temperatura = new ArrayList<Integer>();
-        this.pressao = new ArrayList<Float>();
-        this.dataDados = new ArrayList<String>();
-        this.humidade = new ArrayList<Integer>();
-        this.visibilidade = new ArrayList<Float>();
-        this.nascerSol = new ArrayList<String>();
-        this.porSol = new ArrayList<String>();
+        this.direcaoVento = new ArrayList<>();
+        this.velocidadeVento = new ArrayList<>();
+        this.temperatura = new ArrayList<>();
+        this.pressao = new ArrayList<>();
+        this.dataDados = new ArrayList<>();
+        this.humidade = new ArrayList<>();
+        this.visibilidade = new ArrayList<>();
+        this.nascerSol = new ArrayList<>();
+        this.porSol = new ArrayList<>();
     }
 
     public void putHistorico(Weather weather, String localidade) {
@@ -84,7 +84,14 @@ public class Historico {
             dataSource.setServerName(database.getServerName());
             Connection conn = dataSource.getConnection();
             Statement st = conn.createStatement();
-            ResultSet rs = st.executeQuery("Select * from mydb.Historico where localidade ='" + localidade + "'");
+            ResultSet rs = st.executeQuery(""
+                    + "SELECT max(`localidade`) as `localidade`, "
+                    + " max(`direcaoVento`) as `direcaoVento`, max(`velocidadeVento`) as `velocidadeVento`, "
+                    + " max(`temperatura`) as `temperatura`, max(`pressao`) as `pressao`, max(`dataDados`) as `dataDados`, "
+                    + " max(`humidade`) as `humidade`, max(`visibilidade`) as `visibilidade`, max(`nascerSol`) as `nascerSol`, "
+                    + " max(`porSol`) as `porSol` "
+                    + "FROM mydb.Historico "
+                    + "where localidade = '" + localidade + "' group by dataDados ;");
 
             while (rs.next()) {
                 direcaoVento.add(rs.getInt("direcaoVento"));
@@ -96,11 +103,11 @@ public class Historico {
                 LocalTime timePart = LocalTime.parse(rs.getTime("dataDados").toString());
                 LocalDateTime dt = LocalDateTime.of(datePart, timePart);
                 Date data = java.sql.Timestamp.valueOf(dt);
-                dataDados.add("\""+data+"\"");
+                dataDados.add("\"" + data + "\"");
                 humidade.add(rs.getInt("humidade"));
                 visibilidade.add(rs.getFloat("visibilidade"));
-                nascerSol.add("\""+rs.getString("nascerSol")+"\"");
-                porSol.add("\""+rs.getString("porSol")+"\"");
+                nascerSol.add("\"" + rs.getString("nascerSol") + "\"");
+                porSol.add("\"" + rs.getString("porSol") + "\"");
                 System.out.println("");
             }
             conn.close();

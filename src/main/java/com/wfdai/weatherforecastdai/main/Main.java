@@ -11,14 +11,14 @@ public class Main {
         gestorErros.getErro();
         app.cicloKpi();
 
-        for (int i = 0; i < 7; i++) {
-            if (i < 5) {
+        for (int i = 9; i < 10; i++) {
+            if (i < 8) {
 
                 app.cicloKpi();
                 app.cicloLocalidades();
                 System.out.println("sleep");
                 try {
-                    Thread.sleep(10 * 60 * 1000);
+                    Thread.sleep(5 * 60 * 1000);
                 } catch (InterruptedException exc) {
                     break;
                 }
