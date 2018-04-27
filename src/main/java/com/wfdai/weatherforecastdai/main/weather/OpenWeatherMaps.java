@@ -7,6 +7,7 @@ package main.java.com.wfdai.weatherforecastdai.main.weather;
 
 import java.io.IOException;
 import java.text.SimpleDateFormat;
+import java.util.Date;
 import javax.xml.bind.JAXBException;
 import net.aksingh.owmjapis.CurrentWeather;
 import net.aksingh.owmjapis.OpenWeatherMap;
@@ -15,9 +16,17 @@ import net.aksingh.owmjapis.OpenWeatherMap;
  *
  * @author daniel
  */
-public class OpenWeatherMaps {
+public class OpenWeatherMaps implements WeatherInterface {
 
-    public void setWeatherOWM(String localizacao, Weather weather) throws JAXBException, IOException {
+    /**
+     *
+     * @param localizacao
+     * @param weather
+     * @throws JAXBException
+     * @throws IOException
+     */
+    @Override
+    public void setWeather(String localizacao, Weather weather) throws JAXBException, IOException {
         boolean isMetric = true;
         OpenWeatherMap owm = new OpenWeatherMap("");
         owm.setUnits(OpenWeatherMap.Units.METRIC);
@@ -36,4 +45,7 @@ public class OpenWeatherMaps {
         weather.porSol = new SimpleDateFormat("HH:mm").format(cwd.getSysInstance().getSunsetTime());
 
     }
+
+  
+
 }

@@ -9,6 +9,7 @@ import com.github.fedy2.weather.YahooWeatherService;
 import com.github.fedy2.weather.data.Channel;
 import com.github.fedy2.weather.data.unit.DegreeUnit;
 import java.io.IOException;
+import java.util.Date;
 import java.util.List;
 import javax.xml.bind.JAXBException;
 
@@ -16,9 +17,19 @@ import javax.xml.bind.JAXBException;
  *
  * @author daniel
  */
-public class WeatherYahoo {
+public class WeatherYahoo implements WeatherInterface {
 
-    public void setWeatherYahoo(String localizacao, Weather weather) throws JAXBException, IOException {
+
+
+    /**
+     *
+     * @param localizacao
+     * @param weather
+     * @throws JAXBException
+     * @throws IOException
+     */
+    @Override
+    public void setWeather(String localizacao, Weather weather) throws JAXBException, IOException {
         YahooWeatherService service = new YahooWeatherService();
         List<Channel> channel;
         channel = service.getForecastForLocation(localizacao, DegreeUnit.CELSIUS).first(1);
@@ -45,4 +56,6 @@ public class WeatherYahoo {
         }
 
     }
+
+
 }
