@@ -4,6 +4,11 @@ import java.io.IOException;
 import javax.xml.bind.JAXBException;
 import main.java.com.wfdai.weatherforecastdai.main.GestorErros;
 
+/**
+ * Fabrica de Objetos Weather
+ *
+ * @author daniel
+ */
 public class WeatherFactory {
 
     GestorErros erros = new GestorErros();
@@ -20,6 +25,14 @@ public class WeatherFactory {
         return null;
     }
 
+    /**
+     * Recolhe os dados das API's externas e seleciona um com dados validos.
+     *
+     * @param localizacao String com a localização
+     * @param weather Objecto com os dados meteorologicos recolhidos.
+     * @throws javax.xml.bind.JAXBException
+     * @throws java.io.IOException
+     */
     public void setWeather(String localizacao, Weather weather) throws JAXBException, IOException {
 
         try {
@@ -47,5 +60,4 @@ public class WeatherFactory {
             erros.putErro("OWM JAXBException: " + ex.getCause().toString());
         }
     }
-
 }

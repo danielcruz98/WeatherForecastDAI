@@ -6,6 +6,7 @@
 /home/daniel/NetBeansProjects/WeatherForecastDAI/src/main/java/com/github/fedy2/weather/data/unit/SpeedUnit.java
 /home/daniel/NetBeansProjects/WeatherForecastDAI/src/main/java/com/github/fedy2/weather/binding/Constants.java
 /home/daniel/NetBeansProjects/WeatherForecastDAI/src/main/java/com/github/fedy2/weather/data/unit/WeekDay.java
+/home/daniel/NetBeansProjects/WeatherForecastDAI/src/main/java/com/wfdai/weatherforecastdai/main/weather/WeatherFactory.java
 /home/daniel/NetBeansProjects/WeatherForecastDAI/src/WeatherOld.java
 /home/daniel/NetBeansProjects/WeatherForecastDAI/src/main/java/com/github/fedy2/weather/data/Item.java
 /home/daniel/NetBeansProjects/WeatherForecastDAI/src/main/java/com/wfdai/weatherforecastdai/main/KPI/RegistoKPI.java
@@ -36,6 +37,7 @@
 /home/daniel/NetBeansProjects/WeatherForecastDAI/src/main/java/com/github/fedy2/weather/binding/adapter/WeekDayAdapter.java
 /home/daniel/NetBeansProjects/WeatherForecastDAI/src/main/java/com/wfdai/weatherforecastdai/main/weather/Weather.java
 /home/daniel/NetBeansProjects/WeatherForecastDAI/src/main/java/com/github/fedy2/weather/data/Wind.java
+/home/daniel/NetBeansProjects/WeatherForecastDAI/src/main/java/com/wfdai/weatherforecastdai/main/weather/WeatherInterface.java
 /home/daniel/NetBeansProjects/WeatherForecastDAI/src/main/java/com/github/fedy2/weather/binding/adapter/TimeAdapter.java
 /home/daniel/NetBeansProjects/WeatherForecastDAI/src/main/java/com/github/fedy2/weather/YahooWeatherService.java
 /home/daniel/NetBeansProjects/WeatherForecastDAI/src/main/java/com/github/fedy2/weather/binding/adapter/BarometricPressureStateAdapter.java

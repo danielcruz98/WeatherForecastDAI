@@ -1,19 +1,14 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package main.java.com.wfdai.weatherforecastdai.main.weather;
 
-import java.io.IOException;
 import java.util.Date;
-import javax.xml.bind.JAXBException;
 
 /**
+ * Classe para instanciar os dados metereologicos
  *
  * @author daniel
  */
 public class Weather {
+
     int direcaoVento;
     float velocidadeVento;
     double temperatura;
@@ -24,20 +19,16 @@ public class Weather {
     String nascerSol;
     String porSol;
 
-
-    
-  
     public int getDirecaoVento() {
         return direcaoVento;
     }
 
-   
     public float getVelocidadeVento() {
         return velocidadeVento;
     }
 
     public double getTemperatura() {
-        return   temperatura;
+        return temperatura;
     }
 
     public float getPressao() {
@@ -51,7 +42,6 @@ public class Weather {
     public int getHumidade() {
         return humidade;
     }
-
 
     public float getVisibilidade() {
         return visibilidade;

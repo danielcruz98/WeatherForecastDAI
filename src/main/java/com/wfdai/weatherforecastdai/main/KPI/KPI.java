@@ -1,24 +1,32 @@
 package main.java.com.wfdai.weatherforecastdai.main.KPI;
 
-import com.mysql.jdbc.jdbc2.optional.MysqlDataSource;
-import java.sql.Connection;
-import java.sql.SQLException;
-import java.sql.Statement;
+import main.java.com.wfdai.weatherforecastdai.main.GestorErros;
 import org.eclipse.paho.client.mqttv3.IMqttDeliveryToken;
 import org.eclipse.paho.client.mqttv3.MqttCallback;
 import org.eclipse.paho.client.mqttv3.MqttClient;
 import org.eclipse.paho.client.mqttv3.MqttException;
 import org.eclipse.paho.client.mqttv3.MqttMessage;
 
+/**
+ * Recebe KPI's do broker
+ *
+ * @author daniel
+ */
 public class KPI implements MqttCallback {
 
     private String uptime, totalClients, activeClients, messages, subscriptions, receivedLoad5, receivedLoad15, bytesSent15;
 
     MqttClient client;
+    GestorErros erros = new GestorErros();
 
     public KPI() {
     }
 
+    /**
+     * Recebe KPI's do Broker
+     *
+     * @throws java.lang.InterruptedException
+     */
     public void getKPI() throws InterruptedException {
         try {
             client = new MqttClient("tcp://127.0.0.1:9001", "javaServer");
@@ -29,10 +37,9 @@ public class KPI implements MqttCallback {
             client.disconnect();
 
         } catch (MqttException e) {
-            e.printStackTrace();
+            erros.putErro("GetKPI MQTT exception: " + e.getCause().toString());
         }
     }
-    
 
     @Override
     public void connectionLost(Throwable cause) {
@@ -43,8 +50,8 @@ public class KPI implements MqttCallback {
     @Override
     public void messageArrived(String topic, MqttMessage message)
             throws Exception {
-     
-        this.setKPI( message.toString(),  topic);
+
+        this.setKPI(message.toString(), topic);
     }
 
     @Override
@@ -53,8 +60,14 @@ public class KPI implements MqttCallback {
 
     }
 
+    /**
+     * Atribui KPI's a atributos do objeto do tipo KPI
+     *
+     * @param message Mensagem recebida do broker
+     * @param topic Topico da mensagem do broker
+     */
     public void setKPI(String message, String topic) {
-        
+
         switch (topic) {
             case "$SYS/broker/uptime":
                 this.setUptime(message);

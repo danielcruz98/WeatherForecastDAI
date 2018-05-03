@@ -1,30 +1,24 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package main.java.com.wfdai.weatherforecastdai.main.weather;
 
 import com.github.fedy2.weather.YahooWeatherService;
 import com.github.fedy2.weather.data.Channel;
 import com.github.fedy2.weather.data.unit.DegreeUnit;
 import java.io.IOException;
-import java.util.Date;
 import java.util.List;
 import javax.xml.bind.JAXBException;
 
 /**
+ * Recolhe os dados da API externa Weather Yahoo
  *
  * @author daniel
  */
 public class WeatherYahoo implements WeatherInterface {
 
-
-
     /**
+     * Recolhe os dados da API externa Weather Yahoo
      *
-     * @param localizacao
-     * @param weather
+     * @param localizacao String com a localização
+     * @param weather Objecto com os dados meteorologicos recolhidos.
      * @throws JAXBException
      * @throws IOException
      */
@@ -54,8 +48,5 @@ public class WeatherYahoo implements WeatherInterface {
             weather.porSol = String.format("%02d", channel.get(0).astronomy.getSunset().getHours()
                     + 12) + ":" + String.format("%02d", channel.get(0).astronomy.getSunset().getMinutes());
         }
-
     }
-
-
 }

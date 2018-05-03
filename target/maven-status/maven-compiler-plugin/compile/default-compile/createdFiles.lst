@@ -21,6 +21,7 @@ com/github/fedy2/weather/binding/adapter/FloatAdapter.class
 com/github/fedy2/weather/binding/adapter/SpeedUnitAdapter.class
 com/github/fedy2/weather/data/Units.class
 com/github/fedy2/weather/binding/Constants.class
+main/java/com/wfdai/weatherforecastdai/main/weather/WeatherFactory.class
 com/github/fedy2/weather/binding/adapter/BarometricPressureStateAdapter.class
 main/java/com/wfdai/weatherforecastdai/main/DataBase.class
 com/github/fedy2/weather/data/unit/TimeConvention.class
@@ -34,6 +35,7 @@ com/github/fedy2/weather/binding/adapter/DistanceUnitAdapter.class
 com/github/fedy2/weather/YahooWeatherService$LimitDeclaration.class
 com/github/fedy2/weather/data/Forecast.class
 com/github/fedy2/weather/data/Item.class
+main/java/com/wfdai/weatherforecastdai/main/weather/WeatherInterface.class
 com/github/fedy2/weather/binding/adapter/DistanceUnitAdapter$1.class
 com/github/fedy2/weather/binding/adapter/IntegerAdapter.class
 com/github/fedy2/weather/YahooWeatherService$1.class
