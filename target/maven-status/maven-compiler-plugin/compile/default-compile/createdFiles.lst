@@ -16,7 +16,6 @@ main/java/com/wfdai/weatherforecastdai/main/Parser.class
 com/github/fedy2/weather/binding/adapter/DegreeUnitAdapter$1.class
 com/github/fedy2/weather/binding/RSSParser.class
 com/github/fedy2/weather/data/unit/BarometricPressureState.class
-WeatherOld.class
 com/github/fedy2/weather/binding/adapter/FloatAdapter.class
 com/github/fedy2/weather/binding/adapter/SpeedUnitAdapter.class
 com/github/fedy2/weather/data/Units.class

@@ -1,5 +1,8 @@
 package main.java.com.wfdai.weatherforecastdai.main;
 
+import com.fasterxml.jackson.databind.DeserializationFeature;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import java.io.File;
 import main.java.com.wfdai.weatherforecastdai.main.KPI.KPI;
 import java.io.IOException;
 import javax.xml.bind.JAXBException;
@@ -42,6 +45,16 @@ public class App {
             parser.setParser(weather);
             String mensagem = parser.getParsedMessage();
             publisher.publish(localidade, mensagem);
+            ObjectMapper objectMapper = new ObjectMapper();
+        Alerta a = new Alerta();
+        //objectMapper.writeValue(new File("target/dadosAlerta.json"), a);
+        //String appAsString = objectMapper.writeValueAsString(a);
+        
+        
+        
+        objectMapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
+        
+        Alerta alerta = objectMapper.readValue(new File("target/dadosAlerta.json"), Alerta.class);
         }
     }
 
