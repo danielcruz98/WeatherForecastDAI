@@ -25,17 +25,17 @@ public class Alerta {
             File jsonInputFile = new File("target/configuração.cfg");
             JsonNode rootNode = mapper.readTree(jsonInputFile);
             JsonNode importGelo = rootNode.path("gelo");
-            System.out.println("alertagelo"+importGelo.intValue());
-            this.gelo = importGelo.intValue();
+            gelo = importGelo.intValue();
+            System.out.println("alertagelo"+ gelo);
             JsonNode importFogo = rootNode.path("fogo");
-            System.out.println("alertafogo"+importFogo.intValue());
-            this.gelo = importFogo.intValue();
+            fogo = importFogo.intValue();
+            System.out.println("alertafogo"+fogo);
             JsonNode importChuva = rootNode.path("chuva");
-            System.out.println("alertachuva"+importChuva.intValue());
-            this.gelo = importChuva.intValue();
+            chuva = importChuva.intValue();
+            System.out.println("alertachuva"+chuva);
             JsonNode importVento = rootNode.path("vento");
-            System.out.println("alertavento"+importVento.intValue());
-            this.gelo = importVento.intValue();
+            vento = importVento.intValue();
+            System.out.println("alertavento"+vento);
 
              
         } catch (IOException e) {
